@@ -1,9 +1,12 @@
 # Dynamic Host Blocking System (SDN + TCP Sockets)
 
 **Course project:** SDN – Socket Programming (Jackfruit Mini Project), Problem 12
-**Team:**   Sudha Nigam, PES2UG25CS50
-            Threeksha, PES2UG25CS587
-            Tanvi Thakare
+**Team:**   
+| Name | SRN |
+|---|---|
+| Sudha Nigam | PES2UG25CS550 |
+| Tanvi Thakare | PES2UG25CS578 |
+| Threeksha | PES2UG25CS587 |
 
 A TCP client/server application running on a Mininet network, controlled by a Ryu SDN controller. The controller watches connection rates per host, detects abnormal behaviour, and **dynamically blocks the suspicious host by installing an OpenFlow drop rule**. The block is lifted automatically after a timeout.
 
@@ -152,10 +155,3 @@ Unauthorized / abusive host (connection flood) from h3 while legitimate clients 
 ├── images/           # screenshots
 └── README.md
 ```
-
-## 9. Troubleshooting
-
-- `No module named 'blocker'`: run `ryu-manager` from the folder containing the file, with the correct file name.
-- `ryu-manager: command not found`: activate the venv with `source ~/ryu-env/bin/activate`.
-- Mininet can't reach the controller: start `ryu-manager` first.
-- Stale state after a crash: `sudo mn -c`.

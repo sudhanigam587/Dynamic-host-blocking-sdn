@@ -136,24 +136,11 @@ h3 sends connections at a high rate.
 | Mininet run (pingall, server, clients) | ![mininet](images/mininet_run.jpeg) |
 | Controller STATS + DETECT/BLOCK | ![stats](images/controller_stats.jpeg) |
 
-## 7. Performance Evaluation
-
-<!-- TODO: fill in with your measured numbers. Rubric needs: metrics, multiple conditions, comparison with a baseline. -->
-
-| Metric | Baseline (no blocking, plain learning switch) | With dynamic blocking |
-|---|---|---|
-| Server connections served from h1/h2 during attack | | |
-| Attacker successful connections | | |
-| Detection time (s) | n/a | |
-| Time to block after detection (s) | n/a | |
-
-Conditions tested: varying attack rate, varying threshold (`thr`), with and without attacker.
-
-## 8. Challenging Scenario
+## 7. Challenging Scenario
 
 Unauthorized / abusive host (connection flood) from h3 while legitimate clients h1 and h2 are active. The controller isolates only the offending host and legitimate traffic continues.
 
-## 9. Repository Structure
+## 8. Repository Structure
 
 ```
 .
@@ -166,7 +153,7 @@ Unauthorized / abusive host (connection flood) from h3 while legitimate clients 
 └── README.md
 ```
 
-## 10. Troubleshooting
+## 9. Troubleshooting
 
 - `No module named 'blocker'`: run `ryu-manager` from the folder containing the file, with the correct file name.
 - `ryu-manager: command not found`: activate the venv with `source ~/ryu-env/bin/activate`.
